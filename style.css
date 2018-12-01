@@ -1,0 +1,388 @@
+
+:root {
+    --brown: #4b3422; /* rgb 75, 52, 34 */
+    --dkgreen: #448600;
+    --hops: #acb400;
+    --foam: #cfac82;
+    --ltfoam: #f0e5d8;
+    --beer: #fbb90b;
+    --witch1: 'Amarante', cursive;
+    --witch2: 'Almendra', serif;
+    --witch3: 'IM Fell DW Pica', serif;
+}
+h3 {
+    color: var(--brown);
+}
+ul {
+    list-style: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: var(--ltfoam);
+    font-family: var(--witch3);
+    font-size: 1.2rem;
+    word-spacing: .1rem;    
+}
+nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: ". . ul ";
+    background: var(--brown);
+    padding: .8rem;
+    font-size: 1.4rem;     
+}
+/* navbar */
+nav ul {
+    grid-area: ul;
+    list-style: none;
+    padding-right: 2rem;
+    margin: 0;
+    justify-self: right;
+}
+nav li {
+    display: inline-block;
+}
+nav a {
+    color: var(--foam);
+    font-size: 1.3rem; 
+    text-align: center;
+    margin: 0;
+    padding: .8rem;
+    text-decoration: none;
+}
+
+/* main header */
+header {
+    display: grid;
+    background-image: linear-gradient(rgba(28,20,13,0.75), rgba(28,20,13,0.75)), url(images/brewery2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 25rem;
+}
+header img {
+    width: 10rem;
+    height: 12rem;
+    border: 4px solid var(--foam);
+    border-radius: 50%;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+header img:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(1.5);
+
+    position: relative;
+    top: 20px;
+    left: 60px;   
+}
+h1, h1+p {
+    font-family: var(--witch1);
+    line-height: 1.2em;
+    padding: 0 2rem 0 2rem;
+    color: var(--foam);
+    text-align: center;
+}
+h1 { 
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+h1 + p {
+    font-size: 1.5rem; 
+}
+header p {
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 2.5rem;
+    color: var(--brown);
+}
+
+/* section mailing list  */
+#mailing-list {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "h2 form"
+    "p form";
+    grid-column-gap: 3rem;
+    background-image: url(images/foam.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem;
+    min-height: 4rem;
+    grid-area: form-text;       
+}
+#mailing-list h2 {
+    text-align: center;
+    text-transform: capitalize;   
+}
+#mailing-list p {
+    text-align: center;    
+    color: var(--brown);
+    font-size: 1.5rem;    
+}
+#mailing-list form {
+    grid-area: form;   
+}
+form input {
+    font-family: var(--witch3);
+    font-size: 1.4rem;
+    padding: .2rem .7rem .1rem .7rem;
+    color: var(--brown);
+    background: none;
+    border: 2px solid var(--brown);
+    margin: .2rem;
+    cursor: pointer;
+    
+}
+
+
+/* section tradition */
+#tradition {
+    display: grid; 
+    background: linear-gradient(rgba(28,20,13,0.7), rgba(28,20,13,0.7)), url(images/workers.jpg) no-repeat;
+    background-position: center center; 
+    background-size: cover;
+    min-height: 25rem;
+    text-align: center;
+    align-content: center;        
+}
+#tradition h2, #restoration h2, #specials-image h2 {
+    color: var(--foam);
+    text-transform: capitalize;
+}
+#tradition p, #restoration p, #specials-image p {
+    color: var(--foam);
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+}
+/* section about and section history */
+#about, #history {
+    padding: 2rem;   
+}
+#about h2, #history h2 {
+    text-align: center;
+    padding-bottom: 1rem;
+    text-transform: capitalize;    
+}
+#about p, #history p {
+    color: var(--brown);
+}
+/* section restoration */
+#restoration {
+    display: grid; 
+    background: linear-gradient(rgba(28,20,13,0.7), rgba(28,20,13,0.7)), url(images/exterior.jpg) no-repeat;
+    background-position: center center; 
+    background-size: cover;
+    min-height: 25rem;
+    text-align: center;
+    align-content: center;
+    font-size: 1.2rem; 
+}
+/*#restoration h2 {
+    color: var(--foam);
+    text-transform: capitalize;
+}
+#restoration p {
+    color: var(--foam);
+    padding: 1rem 2rem;
+    font-size: 1.5rem; 
+}*/
+/* section specials-image (header) */
+#specials-image {
+    display: grid; 
+    background: linear-gradient(rgba(28,20,13,0.6), rgba(28,20,13,0.6)), url(images/cheese.jpg) no-repeat;
+    background-position: center center; 
+    background-size: cover;
+    min-height: 25rem;
+    text-align: center;
+    align-content: center;
+    font-size: 1.2rem; 
+}
+/* section specials-text */
+#specials-text {
+    display: grid;
+    grid-template-rows: 1fr 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "specials limited"
+    "menu-link menu-link";
+    padding: 3rem;
+    min-height: 25rem;
+    grid-column-gap: 3rem;
+}
+#specials-text p {
+    padding-bottom: 1rem;
+}
+
+#specials {
+    grid-area: specials;
+}
+#limited {
+    grid-area: limited;
+}
+#menu-link {
+    grid-area: menu-link;
+    text-align: center;
+    padding-top: 1rem;
+}
+#menu-link a {
+    text-decoration: none;
+    color: var(--brown);
+    font-weight: bold;
+    
+}
+/* sectioin gallery */
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     grid-gap: 10px;
+    background: var(--brown);
+    border: 10px solid var(--brown);
+}
+#gallery img {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+/* section location */
+#location {
+    display: grid;
+    grid-template-rows: 1fr, 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "hours map"
+    "address address";
+    padding: 3rem;
+    min-height: 25rem;
+    grid-gap: 3rem;
+}
+#hours {
+    grid-area: hours;
+
+    text-align: center;
+    padding-bottom: 1rem;
+    text-transform: capitalize;
+}
+#map {
+    grid-area: map;
+}
+#address {
+    grid-area: address;
+    text-align: center;
+}
+/* footer */
+footer {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "social"
+    "copy";
+    text-align: center;
+    background: var(--brown);
+    color: var(--foam);
+        
+}
+footer li {
+    display: inline-block;
+    padding: 1rem;
+    padding-top: 2rem;   
+}
+
+footer a:hover, footer a:visited {
+    color: var(--foam);
+}
+ 
+
+#copy {
+    margin: 1rem 2rem;    
+}
+
+/* media queries */
+@media(max-width: 768px) {
+    nav li, nav a {
+        
+        text-align: center;
+        width: 100%;
+        font-size: 1.2em;
+        padding: .3em;
+    }
+    #mailing-list {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "h2"
+        "p"
+        "form";
+        text-align: center;
+        align-content: center;
+        }
+    #mailing-list h2 {
+        grid-area: h2;
+        align-self: center;
+        }
+    #mailing-list p {
+        grid-area: p;
+        align-self: center;
+    }
+    #mailing-list form {
+        grid-area: form;
+    }
+    #mailing-list input {
+        width: 100%;
+    }
+    #specials-text {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "specials"
+        "limited"
+        "menu-link";
+
+        text-align: center;
+        width: 100%;
+    }
+    #specials {
+        grid-area: specials;
+    }
+    #limited {
+        grid-area: limited;
+    }
+    #menu-link {
+        grid-area: menu-link;
+    }
+    #location {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "hours"
+        "map"
+        "address";
+        text-align: center;
+        width: 100%;
+        padding: 0;
+    }
+    #location #hours {
+        grid-area: hours;
+        align-self: center;
+    }
+    #location #map {
+        grid-area: map;
+    }
+    #location #address {
+        grid-area: address;
+        width: 60%;
+        justify-self: center;
+        align-self: center;
+    }
+
+}
